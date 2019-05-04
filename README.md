@@ -1,0 +1,2 @@
+# sugod
+Project starter scripts
