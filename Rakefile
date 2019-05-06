@@ -27,7 +27,7 @@ task :bump, [:type] do |t, args|
   end
 end
 
-task :release => [:changelog, :reload_vesion]
+task :release => [:changelog, :reload_version]
 
 desc "Bump version and then release"
 task :submit, [:bump_type] do |t, args|
