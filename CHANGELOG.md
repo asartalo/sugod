@@ -1,6 +1,14 @@
 
-<a name="0.0.13"></a>
-## [0.0.13](https://github.com/asartalo/sugod/compare/v0.0.12...0.0.13) (2019-05-06)
+<a name="0.0.14"></a>
+## [0.0.14](https://github.com/asartalo/sugod/compare/v0.0.13...0.0.14) (2019-05-06)
+
+### Chore
+
+* Update README and cleanup script
+
+
+<a name="v0.0.13"></a>
+## [v0.0.13](https://github.com/asartalo/sugod/compare/v0.0.12...v0.0.13) (2019-05-06)
 
 ### Chore
 
