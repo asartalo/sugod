@@ -11,13 +11,20 @@ task :changelog do
 end
 
 task :reload_version do
+  warn_level = $VERBOSE
+  $VERBOSE = nil
   load "lib/sugod/version.rb"
+  $VERBOSE = warn_level
 end
 
 desc "Bumps version"
 task :bump, [:type] do |t, args|
   result = `bundle exec gem bump #{args.type}`
-  puts result
+  if $?.success?
+    puts "Successfully bumped version"
+  else
+    abort result
+  end
 end
 
 task :release => [:changelog, :reload_vesion]
@@ -25,8 +32,6 @@ task :release => [:changelog, :reload_vesion]
 desc "Bump version and then release"
 task :submit, [:bump_type] do |t, args|
   Rake::Task["bump"].invoke(args.bump_type)
-  `bundle exec rake `
-  Rake::Task["reload_version"].invoke()
   puts Sugod::VERSION
-  # Rake::Task["release"].invoke()
+  Rake::Task["release"].invoke()
 end
