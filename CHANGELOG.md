@@ -1,4 +1,8 @@
 
+<a name="v0.0.9"></a>
+## [v0.0.9](https://github.com/asartalo/sugod/compare/v0.0.7...v0.0.9) (2019-05-06)
+
+
 <a name="v0.0.7"></a>
 ## [v0.0.7](https://github.com/asartalo/sugod/compare/v0.0.2...v0.0.7) (2019-05-06)
 
