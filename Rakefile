@@ -10,15 +10,23 @@ task :changelog do
   `git-chglog -o CHANGELOG.md`
 end
 
-desc "Bumps version"
-task :bump, [:type] do |t, args|
-  `bundle exec gem bump #{args.type}`
+task :reload_version do
+  load "lib/sugod/version.rb"
 end
 
-task :release => [:changelog]
+desc "Bumps version"
+task :bump, [:type] do |t, args|
+  result = `bundle exec gem bump #{args.type}`
+  puts result
+end
+
+task :release => [:changelog, :reload_vesion]
 
 desc "Bump version and then release"
 task :submit, [:bump_type] do |t, args|
   Rake::Task["bump"].invoke(args.bump_type)
-  Rake::Task["release"].invoke()
+  `bundle exec rake `
+  Rake::Task["reload_version"].invoke()
+  puts Sugod::VERSION
+  # Rake::Task["release"].invoke()
 end
