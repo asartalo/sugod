@@ -33,5 +33,5 @@ desc "Bump version and then release"
 task :submit, [:bump_type] do |t, args|
   Rake::Task["bump"].invoke(args.bump_type)
   puts Sugod::VERSION
-  Rake::Task["release"].invoke()
+  `bundle exec rake release`
 end
