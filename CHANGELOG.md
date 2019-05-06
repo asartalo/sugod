@@ -1,6 +1,14 @@
 
-<a name="0.0.12"></a>
-## [0.0.12](https://github.com/asartalo/sugod/compare/v0.0.11...0.0.12) (2019-05-06)
+<a name="0.0.13"></a>
+## [0.0.13](https://github.com/asartalo/sugod/compare/v0.0.12...0.0.13) (2019-05-06)
+
+### Chore
+
+* Adding release script
+
+
+<a name="v0.0.12"></a>
+## [v0.0.12](https://github.com/asartalo/sugod/compare/v0.0.11...v0.0.12) (2019-05-06)
 
 
 <a name="v0.0.11"></a>
