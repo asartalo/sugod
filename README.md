@@ -2,6 +2,9 @@
 
 Project starter scripts
 
+# DISCONTINUED
+Reason: running `rails --new` inside a ruby script is too problematic. Pivoting to a different approach.
+
 ## Installation
 
 Add this line to your application's Gemfile:
